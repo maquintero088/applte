@@ -1,30 +1,32 @@
 <script>
 	import { page } from '$app/stores';
-	import logo from './svelte-logo.svg';
+	import logo from './logo.svg';
 </script>
 
 <header>
 	<div class="corner">
-		<a href="https://kit.svelte.dev">
+		<a href="https://linkedin.com/in/qcmarcel">
 			<img src={logo} alt="SvelteKit" />
+			<span>Desarrollador de corazón</span>
 		</a>
 	</div>
 
 	<nav>
+
 		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
+			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
 		</svg>
 		<ul>
-			<li class:active={$page.url.pathname === '/'}><a sveltekit:prefetch href="/">Home</a></li>
-			<li class:active={$page.url.pathname === '/about'}>
-				<a sveltekit:prefetch href="/about">About</a>
+			<li class:active={$page.url.pathname === '/'}><a sveltekit:prefetch href="/">About me</a></li>
+			<li class:active={$page.url.pathname === '/projects'}>
+				<a sveltekit:prefetch href="/projects">My Projects</a>
 			</li>
-			<li class:active={$page.url.pathname === '/todos'}>
-				<a sveltekit:prefetch href="/todos">Todos</a>
+			<li class:active={$page.url.pathname === '/contact'}>
+				<a sveltekit:prefetch href="/contact">Contact</a>
 			</li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
+			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
 		</svg>
 	</nav>
 
@@ -37,19 +39,35 @@
 	header {
 		display: flex;
 		justify-content: space-between;
+		width: 100%;
+	}
+
+	nav,.corner{
+		position: fixed;
+		bottom: 0;
+		z-index: 1000;
+	}
+
+	nav {
+		 width: 100%;
 	}
 
 	.corner {
-		width: 3em;
 		height: 3em;
 	}
 
+	.corner img {
+		margin: 0 10px;
+	}
 	.corner a {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		width: 100%;
 		height: 100%;
+		color: #edf0f8;
+		font-size: medium;
+		text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
 	}
 
 	.corner img {
@@ -68,6 +86,7 @@
 		width: 2em;
 		height: 3em;
 		display: block;
+		transform: rotate(180deg);
 	}
 
 	path {

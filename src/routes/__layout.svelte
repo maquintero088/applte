@@ -1,7 +1,16 @@
+<script context="module">
+	export const prerender = true;
+</script>
+
 <script>
 	import Header from '$lib/header/Header.svelte';
 	import '../app.css';
 </script>
+
+<svelte:head>
+	<title>Márcel Quintero | Desarrollador de corazón.</title>
+	<meta name="description" content="Soy Márcel Quintero. Jóven emprendedor con la motivación y el compromiso de diseñar aplicaciones multiplataforma para el beneficio de sectores de innovación" />
+</svelte:head>
 
 <Header />
 
@@ -9,9 +18,9 @@
 	<slot />
 </main>
 
-<footer>
+<!--<footer>
 	<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-</footer>
+</footer>-->
 
 <style>
 	main {

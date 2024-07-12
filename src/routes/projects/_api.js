@@ -1,8 +1,8 @@
 /*
-	This module is used by the /todos endpoint to
-	make calls to api.svelte.dev, which stores todos
+	This module is used by the /projects endpoint to
+	make calls to api.svelte.dev, which stores projects
 	for each user. The leading underscore indicates that this is
-	a private module, _not_ an endpoint — visiting /todos/_api
+	a private module, _not_ an endpoint — visiting /projects/_api
 	will net you a 404 response.
 
 	(The data on the todo app will expire periodically; no

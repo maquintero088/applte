@@ -11,7 +11,7 @@
 
 	// since there's no dynamic data here, we can prerender
 	// it so that it gets served as a static asset in prod
-	export const prerender = true;
+	// export const prerender = true;
 </script>
 
 <svelte:head>
@@ -36,7 +36,7 @@
 	</p>
 
 	<p>
-		The <a href="/todos">TODOs</a> page illustrates SvelteKit's data loading and form handling. Try using
+		The <a href="/projects">TODOs</a> page illustrates SvelteKit's data loading and form handling. Try using
 		it with JavaScript disabled!
 	</p>
 </div>
